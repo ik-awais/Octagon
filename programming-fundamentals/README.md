@@ -45,7 +45,7 @@ maintained_by:  Octagon Team
 repo:           github.com/ik-awais/Octagon
 university:     FAST-NUCES Peshawar
 program:        BS Artificial Intelligence
-semester:       3rd  |  Batch: 2026
+semester:       3rd  |  Batch: 2025
 ```
 
 <br clear="right"/>
