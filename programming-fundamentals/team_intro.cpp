@@ -19,9 +19,10 @@
 using namespace std;
 
 // ── Member 1 ── ik-awais ─────────────────────────────────────
+
 void contributor1() {
     cout << "------------------------------" << endl;
-    cout << "Name        : Muhammad Awais"            << endl;
+    cout << "Name        : Muhammad Awais"   << endl;
     cout << "GitHub      : ik-awais"         << endl;
     cout << "City        : Islamabad"        << endl;
     cout << "Fun Fact    :  CAPTCHAs are real-world applications of the" 
@@ -31,7 +32,10 @@ void contributor1() {
 }
 
 // ── Member 2 ── coder-Retro ──────────────────────────────────
+
+
 void contributor2() {
+
     cout << "------------------------------" << endl;
     cout << "Name        : Hasnain"            << endl;
     cout << "GitHub      : coder-Retro"         << endl;
@@ -41,28 +45,47 @@ void contributor2() {
 }
 
 // ── Member 3 ── Arshkhattak ──────────────────────────────────
-void contributor3() {
-    // TODO (Arshkhattak): replace this comment with your intro
+
+void contributor3()
+{
+    cout << "------------------------------" << endl;
+    cout << "Name        : Areeba Sohail" << endl;
+    cout << "GitHub      : Arshkhattak" << endl;
+    cout << "City        : Peshawar" << endl;
+    cout << "Fun Fact    : I was confident in my math skills until MVC proved me wrong  ." << endl;
+    cout << "------------------------------" << endl;
 }
 
 // ── Member 4 ── p250045-SSR ──────────────────────────────────
 void contributor4() {
+
     // TODO (p250045-SSR): replace this comment with your intro
 }
 
 // ── Member 5 ── SyedaEasha ───────────────────────────────────
-void contributor5() {
+
+void contributor5()
+{
+
     // TODO (SyedaEasha): replace this comment with your intro
 }
 
 // ── Member 6 ── talhazahoor39-collab ─────────────────────────
+
 void contributor6() {
-    // TODO (talhazahoor39-collab): replace this comment with your intro
+     
+    cout << "------------------------------" << endl;
+    cout << "Name        : Muhammad Talha Zahoor Zahoor"   << endl;
+    cout << "GitHub      : talhazahoor39-collab"    << endl;
+    cout << "City        : Rawalpindi"        << endl;
+    cout << "Fun Fact    : Human brain uses 20% of body's energy even though it makes 2% of your body weight."    << endl;
+    cout << "------------------------------" << endl;
+    
 }
 
 // ── Member 7 ── velanora ─────────────────────────────────────
-void contributor7() {
 
+void contributor7() {
     cout << "------------------------------"    << endl;
     cout << "Name        : Syeda Areej E Fatima"<< endl;
     cout << "GitHub      : velanora"            << endl;
@@ -71,17 +94,13 @@ void contributor7() {
     cout << "------------------------------"    << endl;
 }
 
-// ── Member 8 ── waleeja07-wk ─────────────────────────────────
 void contributor8() {
-
-     // TODO (waleeja07-wk): replace this comment with your intro
     cout << "------------------------------" << endl;
     cout << "Name        : Waleeja Khan"   << endl;
     cout << "GitHub      : waleeja07-wk"    << endl;
     cout << "City        : Peshawar"        << endl;
     cout << "Fun Fact    : I am studying AI but I secretly love Medical."    << endl;
     cout << "------------------------------" << endl;
-
 }
 
 // ── Main ─────────────────────────────────────────────────────
@@ -96,10 +115,10 @@ int main() {
     // Uncomment ONLY your own call when you fill your function.
     contributor1();   // ik-awais
     contributor2();   // coder-Retro
-    // contributor3();   // Arshkhattak
+    contributor3();   // Arshkhattak
     // contributor4();   // p250045-SSR
     // contributor5();   // SyedaEasha
-    // contributor6();   // talhazahoor39-collab
+    contributor6();
     contributor7();   // velanora
     contributor8();   // waleeja07-wk
 
