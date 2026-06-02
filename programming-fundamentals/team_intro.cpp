@@ -67,7 +67,12 @@ void contributor7() {
 
 // ── Member 8 ── waleeja07-wk ─────────────────────────────────
 void contributor8() {
-    // TODO (waleeja07-wk): replace this comment with your intro
+    cout << "------------------------------" << endl;
+    cout << "Name        : Waleeja Khan"   << endl;
+    cout << "GitHub      : waleeja07-wk"    << endl;
+    cout << "City        : Peshawar"        << endl;
+    cout << "Fun Fact    : I am studying AI but I secretly love Medical."    << endl;
+    cout << "------------------------------" << endl;
 }
 
 // ── Main ─────────────────────────────────────────────────────
@@ -88,6 +93,7 @@ int main() {
     // contributor6();   // talhazahoor39-collab
     // contributor7();   // velanora
     // contributor8();   // waleeja07-wk
+    contributor8();   // waleeja07-wk
 
     cout << endl;
     cout << "============================================" << endl;
