@@ -19,8 +19,10 @@
 using namespace std;
 
 // ── Member 1 ── ik-awais ─────────────────────────────────────
+
 void contributor1()
 {
+
     // TODO (ik-awais): replace this comment with your intro
     // Example:
     // cout << "------------------------------" << endl;
@@ -32,12 +34,15 @@ void contributor1()
 }
 
 // ── Member 2 ── coder-Retro ──────────────────────────────────
-void contributor2()
-{
+
+
+void contributor2() {
+
     // TODO (coder-Retro): replace this comment with your intro
 }
 
 // ── Member 3 ── Arshkhattak ──────────────────────────────────
+
 void contributor3()
 {
     // TODO (Arshkhattak): replace this comment with your intro
@@ -50,38 +55,48 @@ void contributor3()
 }
 
 // ── Member 4 ── p250045-SSR ──────────────────────────────────
-void contributor4()
-{
+
+// ── Member 4 ── p250045-SSR ──────────────────────────────────
+void contributor4() {
+
     // TODO (p250045-SSR): replace this comment with your intro
 }
 
 // ── Member 5 ── SyedaEasha ───────────────────────────────────
+
 void contributor5()
 {
+
     // TODO (SyedaEasha): replace this comment with your intro
 }
 
 // ── Member 6 ── talhazahoor39-collab ─────────────────────────
-void contributor6()
-{
+
+void contributor6() {
+
     // TODO (talhazahoor39-collab): replace this comment with your intro
 }
 
 // ── Member 7 ── velanora ─────────────────────────────────────
-void contributor7()
-{
+
+void contributor7() {
+
     // TODO (velanora): replace this comment with your intro
 }
 
-// ── Member 8 ── waleeja07-wk ─────────────────────────────────
-void contributor8()
-{
-    // TODO (waleeja07-wk): replace this comment with your intro
+void contributor8() {
+     // TODO (waleeja07-wk): replace this comment with your intro
+    cout << "------------------------------" << endl;
+    cout << "Name        : Waleeja Khan"   << endl;
+    cout << "GitHub      : waleeja07-wk"    << endl;
+    cout << "City        : Peshawar"        << endl;
+    cout << "Fun Fact    : I am studying AI but I secretly love Medical."    << endl;
+    cout << "------------------------------" << endl;
 }
 
 // ── Main ─────────────────────────────────────────────────────
-int main()
-{
+int main() {
+
 
     cout << "============================================" << endl;
     cout << "       OCTAGON — TEAM INTRODUCTION          " << endl;
@@ -97,7 +112,9 @@ int main()
     // contributor5();   // SyedaEasha
     // contributor6();   // talhazahoor39-collab
     // contributor7();   // velanora
-    // contributor8();   // waleeja07-wk
+
+   // contributor8();   // waleeja07-wk
+
 
     cout << endl;
     cout << "============================================" << endl;
