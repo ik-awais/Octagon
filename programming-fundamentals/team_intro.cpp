@@ -95,7 +95,7 @@ int main() {
 
     // Uncomment ONLY your own call when you fill your function.
     contributor1();   // ik-awais
-    // contributor2();   // coder-Retro
+    contributor2();   // coder-Retro
     // contributor3();   // Arshkhattak
     // contributor4();   // p250045-SSR
     // contributor5();   // SyedaEasha
