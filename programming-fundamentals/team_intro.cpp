@@ -19,6 +19,7 @@
 using namespace std;
 
 // ── Member 1 ── ik-awais ─────────────────────────────────────
+ Areeba
 
 void contributor1()
 {
@@ -31,14 +32,34 @@ void contributor1()
     // cout << "City        : Islamabad"        << endl;
     // cout << "Fun Fact    : I love open source." << endl;
     // cout << "------------------------------" << endl;
+
+void contributor1() {
+    cout << "------------------------------" << endl;
+    cout << "Name        : Muhammad Awais"            << endl;
+    cout << "GitHub      : ik-awais"         << endl;
+    cout << "City        : Islamabad"        << endl;
+    cout << "Fun Fact    :  CAPTCHAs are real-world applications of the" 
+    << """Turing Test"", created by Alan Turing to determine if a machine"
+    << "can exhibit intelligent behavior equivalent to a human." << endl;
+    cout << "------------------------------" << endl;
+ main
 }
 
 // ── Member 2 ── coder-Retro ──────────────────────────────────
 
 
 void contributor2() {
+ Areeba
 
     // TODO (coder-Retro): replace this comment with your intro
+
+    cout << "------------------------------" << endl;
+    cout << "Name        : Hasnain"            << endl;
+    cout << "GitHub      : coder-Retro"         << endl;
+    cout << "City        : Peshawar"        << endl;
+    cout << "Fun Fact    : I love simplicity" << endl;
+    cout << "------------------------------" << endl;
+ main
 }
 
 // ── Member 3 ── Arshkhattak ──────────────────────────────────
@@ -73,18 +94,43 @@ void contributor5()
 // ── Member 6 ── talhazahoor39-collab ─────────────────────────
 
 void contributor6() {
+ Areeba
 
     // TODO (talhazahoor39-collab): replace this comment with your intro
+=======
+     
+    cout << "------------------------------" << endl;
+    cout << "Name        : Muhammad Talha Zahoor Zahoor"   << endl;
+    cout << "GitHub      : talhazahoor39-collab"    << endl;
+    cout << "City        : Rawalpindi"        << endl;
+    cout << "Fun Fact    : Human brain uses 20% of body's energy even though it makes 2% of your body weight."    << endl;
+    cout << "------------------------------" << endl;
+    
+
+ main
 }
 
 // ── Member 7 ── velanora ─────────────────────────────────────
 
 void contributor7() {
 
+ Areeba
     // TODO (velanora): replace this comment with your intro
+
+    cout << "------------------------------"    << endl;
+    cout << "Name        : Syeda Areej E Fatima"<< endl;
+    cout << "GitHub      : velanora"            << endl;
+    cout << "City        : Peshawar"            << endl;
+    cout << "Fun Fact    : I explore new tech out of curiosity." << endl;
+    cout << "------------------------------"    << endl;
+ main
 }
 
 void contributor8() {
+< talhazahoor39collab/team-intro
+    // TODO (waleeja07-wk): replace this comment with your intro
+
+
      // TODO (waleeja07-wk): replace this comment with your intro
     cout << "------------------------------" << endl;
     cout << "Name        : Waleeja Khan"   << endl;
@@ -92,6 +138,7 @@ void contributor8() {
     cout << "City        : Peshawar"        << endl;
     cout << "Fun Fact    : I am studying AI but I secretly love Medical."    << endl;
     cout << "------------------------------" << endl;
+ main
 }
 
 // ── Main ─────────────────────────────────────────────────────
@@ -105,16 +152,25 @@ int main() {
     cout << endl;
 
     // Uncomment ONLY your own call when you fill your function.
-    // contributor1();   // ik-awais
+    contributor1();   // ik-awais
     // contributor2();   // coder-Retro
     contributor3(); // Arshkhattak
     // contributor4();   // p250045-SSR
     // contributor5();   // SyedaEasha
-    // contributor6();   // talhazahoor39-collab
+ talhazahoor39collab/team-intro
+       contributor6();
     // contributor7();   // velanora
+ Areeba
 
    // contributor8();   // waleeja07-wk
 
+
+    // contributor8();   // waleeja07-wk
+    // contributor6();   // talhazahoor39-collab
+    contributor7();   // velanora
+    contributor8();   // waleeja07-wk
+ main
+ main
 
     cout << endl;
     cout << "============================================" << endl;
