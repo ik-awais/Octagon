@@ -20,14 +20,14 @@ using namespace std;
 
 // ── Member 1 ── ik-awais ─────────────────────────────────────
 void contributor1() {
-    // TODO (ik-awais): replace this comment with your intro
-    // Example:
-    // cout << "------------------------------" << endl;
-    // cout << "Name        : Awais"            << endl;
-    // cout << "GitHub      : ik-awais"         << endl;
-    // cout << "City        : Islamabad"        << endl;
-    // cout << "Fun Fact    : I love open source." << endl;
-    // cout << "------------------------------" << endl;
+    cout << "------------------------------" << endl;
+    cout << "Name        : Muhammad Awais"            << endl;
+    cout << "GitHub      : ik-awais"         << endl;
+    cout << "City        : Islamabad"        << endl;
+    cout << "Fun Fact    :  CAPTCHAs are real-world applications of the" 
+    << """Turing Test"", created by Alan Turing to determine if a machine"
+    << "can exhibit intelligent behavior equivalent to a human." << endl;
+    cout << "------------------------------" << endl;
 }
 
 // ── Member 2 ── coder-Retro ──────────────────────────────────
@@ -89,19 +89,14 @@ int main() {
     cout << endl;
 
     // Uncomment ONLY your own call when you fill your function.
-    // contributor1();   // ik-awais
+    contributor1();   // ik-awais
     // contributor2();   // coder-Retro
     // contributor3();   // Arshkhattak
     // contributor4();   // p250045-SSR
     // contributor5();   // SyedaEasha
     // contributor6();   // talhazahoor39-collab
-
     contributor7();   // velanora
-    // contributor8();   // waleeja07-wk
-
-    // contributor7();   // velanora
     contributor8();   // waleeja07-wk
-
 
     cout << endl;
     cout << "============================================" << endl;
