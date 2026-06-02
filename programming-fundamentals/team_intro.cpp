@@ -32,7 +32,12 @@ void contributor1() {
 
 // ── Member 2 ── coder-Retro ──────────────────────────────────
 void contributor2() {
-    // TODO (coder-Retro): replace this comment with your intro
+    cout << "------------------------------" << endl;
+    cout << "Name        : Hasnain"            << endl;
+    cout << "GitHub      : coder-Retro"         << endl;
+    cout << "City        : Peshawar"        << endl;
+    cout << "Fun Fact    : I love simplicity" << endl;
+    cout << "------------------------------" << endl;
 }
 
 // ── Member 3 ── Arshkhattak ──────────────────────────────────
