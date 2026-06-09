@@ -178,13 +178,13 @@ struct TreeNode {
 ### Step 1 — Create your branch
 
 ```bash
-git checkout -b your-name/dsa-what-you-are-adding
+git checkout -b your-name/dsa-topic
 ```
 
 **Examples:**
 ```bash
-git checkout -b ali/linked-list-insertion
-git checkout -b easha/bubble-sort
+git checkout -b ali/linked-list
+git checkout -b easha/stack-array
 git checkout -b arsh/binary-search-tree
 ```
 
@@ -199,7 +199,7 @@ Open the template file, implement the required logic, and save your completed ve
 ### Step 3 — Compile and test before committing
 
 ```bash
-g++ -Wall -std=c++17 your-file.cpp -o test
+g++ your-file.cpp -o test
 ./test
 ```
 > Never commit code that does not compile.
@@ -311,7 +311,7 @@ This is a safe, respectful, and collaborative learning space.
 
 **University:** FAST — National University of Computer & Emerging Sciences (NUCES)
 **Program:** Bachelor of Science in Artificial Intelligence
-**Semester:** 3rd | **Batch:** 2026
+**Semester:** 3rd | **Batch:** 2025
 
 <br/>
 
