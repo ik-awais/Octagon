@@ -60,7 +60,7 @@ int main() {
     cout << "Length of 'ik-awais': " << count_ikawais(roster[0]) << endl;
 
     // ADD YOUR FUNCTION CALL BELOW THIS LINE
-    cout << "Length of 'coderretro': " << count_coderretro(roster[1]) << endl
+    cout << "Length of 'coderretro': " << count_coderretro(roster[1]) << endl;
 
     return 0;
 }
