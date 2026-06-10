@@ -20,7 +20,7 @@ using namespace std;
 const char* roster[] = {
     "ik-awais",      // index 0
     // members: add your entry below this line
-    "coderretro"
+    "coderretro",
 };
 
 // ─── STEP 2 ────────────────────────────────────────────────────────────
@@ -60,7 +60,7 @@ int main() {
     cout << "Length of 'ik-awais': " << count_ikawais(roster[0]) << endl;
 
     // ADD YOUR FUNCTION CALL BELOW THIS LINE
-    cout << "Length of 'coderretro': " << count_ikawais(roster[1]) << endl;
+    cout << "Length of 'coderretro': " << count_coderretro(roster[1]) << endl;
 
     return 0;
 }
