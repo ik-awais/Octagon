@@ -19,8 +19,12 @@ using namespace std;
 
 const char* roster[] = {
     "ik-awais",      // index 0
-    // members: add your entry below this line
+    // members: add your entry below this lin
+
     "coderretro",
+    "velanora",
+    "Arshkhattak",
+
 };
 
 // ─── STEP 2 ────────────────────────────────────────────────────────────
@@ -36,10 +40,25 @@ int count_ikawais(const char* name) {
     return len;
 }
 
+
+// ─── YOUR FUNCTION GOES HERE ────────────────────────────────────────────
+
 int count_coderretro(const char* name) {
     if(!name) return 0;
     int len=0;
     while(*name++) len++;
+
+    return len;
+}
+
+int count_velanora(const char*name)
+{
+    int len = 0;
+    while (*name != '\0')
+    {
+        name++;
+        len++;
+    } 
     return len;
 }
 
@@ -70,9 +89,14 @@ int main() {
     cout << "Length of 'ik-awais': " << count_ikawais(roster[0]) << endl;
 
     // ADD YOUR FUNCTION CALL BELOW THIS LINE
+
     cout << "Length of 'coderretro': " << count_coderretro(roster[1]) << endl;
 
-    cout  << "Length of 'Arshkhattak' :" << count_Arshkhattak(roster[3]) << endl;
+    cout << "Length of 'velanora': " << count_velanora(roster[2]) << endl;
+
+      cout  << "Length of 'Arshkhattak' :" << count_Arshkhattak(roster[3]) << endl;
+
 
     return 0;
 }
+
