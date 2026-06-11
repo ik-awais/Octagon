@@ -58,7 +58,9 @@ int count_velanora(const char*name)
     {
         name++;
         len++;
-    }
+    } 
+    return len;
+}
 
 
 
