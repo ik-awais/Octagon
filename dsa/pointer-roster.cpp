@@ -43,6 +43,16 @@ int count_coderretro(const char* name) {
     return len;
 }
 
+int count_Arshkhattak(const char * name)
+{
+    int len = 0;
+    while (*name != '\0') {
+        len++;
+        name++;
+    }
+    return len;
+}
+
 // ─── STEP 3 ────────────────────────────────────────────────────────────
 int main() {
 
@@ -61,6 +71,8 @@ int main() {
 
     // ADD YOUR FUNCTION CALL BELOW THIS LINE
     cout << "Length of 'coderretro': " << count_coderretro(roster[1]) << endl;
+
+    cout  << "Length of 'Arshkhattak' :" << count_Arshkhattak(roster[3]) << endl;
 
     return 0;
 }
