@@ -72,6 +72,7 @@ int count_Arshkhattak(const char * name)
     return len;
 }
 
+
 // ─── STEP 3 ────────────────────────────────────────────────────────────
 int main() {
 
@@ -82,7 +83,7 @@ int main() {
         cout << "Member " << (i + 1) << ": " << *ptr << endl;
         ptr++;
     }
-
+ 
     cout << "---" << endl;
 
     // Function calls — example already here:
@@ -94,8 +95,7 @@ int main() {
 
     cout << "Length of 'velanora': " << count_velanora(roster[2]) << endl;
 
-      cout  << "Length of 'Arshkhattak' :" << count_Arshkhattak(roster[3]) << endl;
-
+    cout  << "Length of 'Arshkhattak' :" << count_Arshkhattak(roster[3]) << endl;
 
     return 0;
 }
