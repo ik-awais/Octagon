@@ -101,9 +101,12 @@ This is the **DSA** workspace for the Octagon team. We study Data Structures and
 
 ```cpp
 int x = 10;
-int* ptr = &x;   // pointer stores address of x
-cout << *ptr;    // dereference — prints 10
-ptr++;           // pointer arithmetic
+int* ptr = &x;    // ptr holds the memory address of x
+cout << *ptr;     // dereference — prints 10
+cout << ptr;      // prints address of x (e.g. 0x7ffee...)
+int y = 20;
+int* ptr2 = &y;
+ptr2++;           // moves ptr2 to the next int-sized address (pointer arithmetic)
 ```
 
 **Linear Data Structures**
@@ -117,15 +120,15 @@ struct Node {
 ```
 
 ```cpp
-// Stack — LIFO
+// Stack — LIFO (Last In, First Out)
 push(10); push(20); push(30);
-pop();    // returns 30
+pop();    // returns 30  ← last element pushed is first out
 ```
 
 ```cpp
-// Queue — FIFO
+// Queue — FIFO (First In, First Out)
 enqueue(1); enqueue(2); enqueue(3);
-dequeue();  // returns 1
+dequeue();  // returns 1  ← first element enqueued is first out
 ```
 
 <br clear="right"/>
@@ -135,7 +138,9 @@ dequeue();  // returns 1
 **Sorting**
 
 ```cpp
-// Bubble Sort
+// Bubble Sort — ascending order
+// Each pass bubbles the largest unsorted element to its correct position
+// Time: O(n²) average and worst | Space: O(1)
 for (int i = 0; i < n - 1; i++)
     for (int j = 0; j < n - i - 1; j++)
         if (arr[j] > arr[j+1])
@@ -145,11 +150,16 @@ for (int i = 0; i < n - 1; i++)
 **Searching**
 
 ```cpp
-// Binary Search
-int mid = (low + high) / 2;
-if (arr[mid] == target) return mid;
-else if (arr[mid] < target) low = mid + 1;
-else high = mid - 1;
+// Binary Search — requires a SORTED array
+// Time: O(log n) | Space: O(1) iterative
+int low = 0, high = n - 1;
+while (low <= high) {
+    int mid = (low + high) / 2;
+    if (arr[mid] == target) return mid;        // found
+    else if (arr[mid] < target) low = mid + 1; // search right half
+    else high = mid - 1;                       // search left half
+}
+return -1; // not found
 ```
 
 **Trees**
@@ -281,14 +291,18 @@ Examples:
 | Structure / Algorithm | Access | Search | Insert | Delete | Space |
 |:----------------------|:------:|:------:|:------:|:------:|:-----:|
 | Array | O(1) | O(n) | O(n) | O(n) | O(n) |
-| Singly Linked List | O(n) | O(n) | O(1) | O(1) | O(n) |
+| Singly Linked List | O(n) | O(n) | O(1)* | O(1)* | O(n) |
 | Stack | O(n) | O(n) | O(1) | O(1) | O(n) |
 | Queue | O(n) | O(n) | O(1) | O(1) | O(n) |
-| Binary Search Tree | O(log n) | O(log n) | O(log n) | O(log n) | O(n) |
+| Binary Search Tree | O(log n) avg | O(log n) avg | O(log n) avg | O(log n) avg | O(n) |
 | Bubble Sort | — | — | — | — | O(1) |
 | Merge Sort | — | — | — | — | O(n) |
-| Quick Sort | — | — | — | — | O(log n) |
+| Quick Sort | — | — | — | — | O(log n) avg |
 | Binary Search | — | O(log n) | — | — | O(1) |
+
+> \* Linked List insert/delete is O(1) **only when you already hold a pointer to the target node**. Finding the node first costs O(n).
+>
+> BST worst case (skewed/unbalanced tree) degrades to O(n) for all operations. Use AVL or Red-Black Trees for guaranteed O(log n).
 
 </div>
 
@@ -311,7 +325,7 @@ This is a safe, respectful, and collaborative learning space.
 
 **University:** FAST — National University of Computer & Emerging Sciences (NUCES)
 **Program:** Bachelor of Science in Artificial Intelligence
-**Semester:** 3rd | **Batch:** 2025
+**Semester:** 3rd &nbsp;|&nbsp; **Batch:** 2025
 
 <br/>
 
@@ -320,7 +334,7 @@ This is a safe, respectful, and collaborative learning space.
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=13&duration=4000&pause=1000&color=6e40c9&center=true&vCenter=true&width=500&lines=Data+Structures+%E2%80%94+The+backbone+of+every+program.;Octagon+%7C+FAST+NUCES+%7C+AI+Cohort+%7C+2026;Think+in+structures.+Code+in+C%2B%2B." alt="Footer Typing"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=13&duration=4000&pause=1000&color=6e40c9&center=true&vCenter=true&width=500&lines=Data+Structures+%E2%80%94+The+backbone+of+every+program.;Octagon+%7C+FAST+NUCES+%7C+AI+Cohort+%7C+2025;Think+in+structures.+Code+in+C%2B%2B." alt="Footer Typing"/>
 
 <br/>
 
