@@ -23,6 +23,7 @@ const char* roster[] = {
 
     "coderretro",
     "velanora",
+    "Arshkhattak",
 
 };
 
@@ -50,7 +51,6 @@ int count_coderretro(const char* name) {
     return len;
 }
 
-
 int count_velanora(const char*name)
 {
     int len = 0;
@@ -62,6 +62,15 @@ int count_velanora(const char*name)
     return len;
 }
 
+int count_Arshkhattak(const char * name)
+{
+    int len = 0;
+    while (*name != '\0') {
+        len++;
+        name++;
+    }
+    return len;
+}
 
 
 // ─── STEP 3 ────────────────────────────────────────────────────────────
@@ -74,7 +83,7 @@ int main() {
         cout << "Member " << (i + 1) << ": " << *ptr << endl;
         ptr++;
     }
-
+ 
     cout << "---" << endl;
 
     // Function calls — example already here:
@@ -86,7 +95,7 @@ int main() {
 
     cout << "Length of 'velanora': " << count_velanora(roster[2]) << endl;
 
-
+    cout  << "Length of 'Arshkhattak' :" << count_Arshkhattak(roster[3]) << endl;
 
     return 0;
 }
