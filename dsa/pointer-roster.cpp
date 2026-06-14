@@ -25,6 +25,7 @@ const char* roster[] = {
     "velanora",
     "Arshkhattak",
     "waleeja07-wk",
+    "SyedaEasha"
 
 };
 
@@ -81,7 +82,15 @@ int count_waleeja07(const char* name) {
     }
     return len;
 }
-
+int count_SyedaEasha(const char * name)
+{
+    int len = 0;
+    while (*name != '\0') {
+        len++;
+        name++;
+    }
+    return len;
+}
 
 // ─── STEP 3 ────────────────────────────────────────────────────────────
 int main() {
@@ -108,6 +117,8 @@ int main() {
     cout  << "Length of 'Arshkhattak' :" << count_Arshkhattak(roster[3]) << endl;
 
     cout << "Length of 'waleeja07-wk': " << count_waleeja07(roster[4]) << endl;
+
+    cout << "Length of 'SyedaEasha': " << count_SyedaEasha(roster[5]) << endl;
 
     return 0;
 }
