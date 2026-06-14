@@ -25,8 +25,8 @@ const char* roster[] = {
     "velanora",
     "Arshkhattak",
     "waleeja07-wk",
-    "SyedaEasha"
-
+    "SyedaEasha",
+    "TalhaZahoor"
 };
 
 // ─── STEP 2 ────────────────────────────────────────────────────────────
@@ -49,7 +49,6 @@ int count_coderretro(const char* name) {
     if(!name) return 0;
     int len=0;
     while(*name++) len++;
-
     return len;
 }
 
@@ -92,6 +91,15 @@ int count_SyedaEasha(const char * name)
     return len;
 }
 
+int count_Talha(const char* name) {
+    int len = 0;
+    while (*name != '\0') {
+        len++;
+        name++;
+    }
+    return len;
+}
+
 // ─── STEP 3 ────────────────────────────────────────────────────────────
 int main() {
 
@@ -120,6 +128,7 @@ int main() {
 
     cout << "Length of 'SyedaEasha': " << count_SyedaEasha(roster[5]) << endl;
 
+     cout << "Length of 'TalhaZahoor': " << count_Talha(roster[6]) << endl;
     return 0;
 }
 
