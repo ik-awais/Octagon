@@ -66,8 +66,12 @@ void contributor4() {
 
 void contributor5()
 {
-
-    // TODO (SyedaEasha): replace this comment with your intro
+       cout << "------------------------------" << endl;
+    cout << "Name        : Syeda easha"   << endl;
+    cout << "GitHub      : SyedaEasha"         << endl;
+    cout << "City        : Islamabad"        << endl;
+    cout << "Fun Fact    : i love talking tommy more then anything"<< endl;
+    cout << "------------------------------" << endl;
 }
 
 // ── Member 6 ── talhazahoor39-collab ─────────────────────────
@@ -117,7 +121,7 @@ int main() {
     contributor2();   // coder-Retro
     contributor3();   // Arshkhattak
     // contributor4();   // p250045-SSR
-    // contributor5();   // SyedaEasha
+    contributor5();   // SyedaEasha
     contributor6();
     contributor7();   // velanora
     contributor8();   // waleeja07-wk
