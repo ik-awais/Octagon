@@ -12,6 +12,7 @@ int main() {
     vector<string> roster;
 
     // ── CONFLICT ZONE: every member adds their line here ──
+    roster.push_back("Muhammad Awais");
     roster.push_back("coderretro");
     // ── END CONFLICT ZONE ──
 
