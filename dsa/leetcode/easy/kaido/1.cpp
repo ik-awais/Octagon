@@ -23,7 +23,7 @@ int main() {
 
     vector<int> answer=s.twoSum(testCase,target);
 
-    for(int i=0:i<answer.size();i++)
+    for(int i=0;i<answer.size();i++)
         cout<<answer[i]<<" ";
     return 0;
 }
