@@ -14,8 +14,11 @@ int main() {
     // ── CONFLICT ZONE: every member adds their line here ──
     roster.push_back("Muhammad Awais");
     roster.push_back("coderretro");
+    roster.push_back("Talha Zahoor");
     roster.push_back("SyedaEasha");
-    roster.push_back("Arshkhattak");
+    roster.push_back("waleeja07-wk");
+     roster.push_back("Arshkhattak");
+
     // ── END CONFLICT ZONE ──
 
     printRoster(roster);
