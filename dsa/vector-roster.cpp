@@ -15,6 +15,7 @@ int main() {
     roster.push_back("Muhammad Awais");
     roster.push_back("coderretro");
     roster.push_back("SyedaEasha");
+    roster.push_back("Arshkhattak");
     // ── END CONFLICT ZONE ──
 
     printRoster(roster);
