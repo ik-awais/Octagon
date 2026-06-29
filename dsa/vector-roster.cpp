@@ -17,7 +17,8 @@ int main() {
     roster.push_back("Talha Zahoor");
     roster.push_back("SyedaEasha");
     roster.push_back("waleeja07-wk");
-     roster.push_back("Arshkhattak");
+    roster.push_back("Arshkhattak");
+    roster.push_back("velanora");
 
     // ── END CONFLICT ZONE ──
 
