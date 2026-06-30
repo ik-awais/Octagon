@@ -6,10 +6,12 @@ class vector {
 private:
     // Dont rename these variables
     int* ptr;
-    int cap;
-    int len;
+    size_t cap;
+    size_t len;
 public:
-    vector(int cap=0) : ptr(nullptr), cap(cap), len(0) {}
+    vector(size_t cap=0) : cap(cap), len(0) {
+        ptr=(cap)? new int[cap]:nullptr;
+    }
     
     // Replace yourName with your mentioned name in Issue Description:
     void pushback_yourName(int value) {
@@ -22,9 +24,9 @@ public:
     }
 
     // Dont Touch Anything Else in this Vector Class.
-    int size()const            { return len;        }
-    int capacity()const        { return cap;        }
-    int& operator[](int index) { return ptr[index]; }
+    size_t size()const            { return len;        }
+    size_t capacity()const        { return cap;        }
+    int& operator[](size_t index) { return ptr[index]; }
     ~vector() { delete[] ptr; }
 };
 
