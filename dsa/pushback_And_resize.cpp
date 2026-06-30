@@ -49,7 +49,7 @@ int main() {
     // cout<<"Areeba   vector size: "<<v7.size()<<'\n';
 
     // Calling pushbacks
-    cout<<"\nPushing Values :\n";
+    cout<<"\nPushing Values ...\n";
     // v1.pushback_awais    (250011);
     // v2.pushback_kaido    (253015);
     // v3.pushback_talha    (250027);
