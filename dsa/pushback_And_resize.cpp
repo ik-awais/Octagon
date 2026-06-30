@@ -11,12 +11,12 @@ private:
 public:
     vector(int cap=0) : ptr(nullptr), cap(cap), len(0) {}
     
-    // Replace yourName with your mentioned name in pushback in main function:
+    // Replace yourName with your mentioned name in Issue Description:
     void pushback_yourName(int value) {
         // Your Code Here
     }
 
-    // Replace yourName with your mentioned name in pushback in main function:
+    // Replace yourName with your mentioned name in Issue Description:
     void resize_yourName() {
         // Your Code Here
     }
