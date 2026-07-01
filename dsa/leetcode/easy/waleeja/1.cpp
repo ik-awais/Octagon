@@ -9,7 +9,14 @@ using namespace std;
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums,int target) {
-        // Your Code Here
+        for(int k=0;k<nums.size();k++){
+            for(int j=0;j<nums.size();j++){
+                if(nums[k]+nums[j]==target){
+                    return {k,j};
+                }
+            }
+        }
+        return {};
     }
 };
 
@@ -23,7 +30,7 @@ int main() {
 
     vector<int> answer=s.twoSum(testCase,target);
 
-    for(int i=0:i<answer.size();i++)
+    for(int i=0;i<answer.size();i++)
         cout<<answer[i]<<" ";
     return 0;
 }
