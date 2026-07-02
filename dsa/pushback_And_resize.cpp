@@ -18,7 +18,14 @@ public:
         if(len==cap) resize_kaido();
         ptr[len++]=value;
     }
-
+    void pushback_talha(int value){
+        if(len==cap){
+            resize_talha();
+        ptr[len++]=value;
+        }
+        else
+        ptr[len++]=value;
+    }
     void pushback_velanora(int value)
     {
         if(len == cap)
@@ -37,7 +44,18 @@ public:
         delete[] ptr;
         ptr=newPtr;
     }
-
+    void resize_talha(){
+        if(cap==0)
+        cap++;
+        else
+        cap=cap*2;
+        int *newptr=new int[cap];
+        for(int i=0;i<len;i++){
+            newptr[i]=ptr[i];
+        }
+        delete[] ptr;
+        ptr=newptr;
+    }
     void resize_velanora()
     {
         if(!cap)
@@ -75,7 +93,7 @@ int main() {
     cout<<"Initial Sizes (Empty Vectors) :\n";
     // cout<<"Awais    vector size: "<<v1.size()<<'\n';
     cout<<"Kaido    vector size: "<<v2.size()<<'\n';
-    // cout<<"Talha    vector size: "<<v3.size()<<'\n';
+    cout<<"Talha    vector size: "<<v3.size()<<'\n';
     cout<<"Velanora vector size: "<<v4.size()<<'\n';
     // cout<<"Waleeja  vector size: "<<v5.size()<<'\n';
     // cout<<"Easha    vector size: "<<v6.size()<<'\n';
@@ -85,7 +103,7 @@ int main() {
     cout<<"\nPushing Values ...\n";
     // v1.pushback_awais    (250011);
     v2.pushback_kaido    (253015);
-    // v3.pushback_talha    (250027);
+    v3.pushback_talha    (250027);
     v4.pushback_velanora (250014);
     // v5.pushback_waleeja  (250005);
     // v6.pushback_easha    (250064);
@@ -95,7 +113,7 @@ int main() {
     cout<<"\nSize Increased :\n";
     // cout<<"Awais    vector size: "<<v1.size()<<'\n';
     cout<<"Kaido    vector size: "<<v2.size()<<'\n';
-    // cout<<"Talha    vector size: "<<v3.size()<<'\n';
+    cout<<"Talha    vector size: "<<v3.size()<<'\n';
     cout<<"Velanora vector size: "<<v4.size()<<'\n';
     // cout<<"Waleeja  vector size: "<<v5.size()<<'\n';
     // cout<<"Easha    vector size: "<<v6.size()<<'\n';
@@ -105,7 +123,7 @@ int main() {
     cout<<"\nPrinting Values :\n";
     // cout<<"Awais    : "<<v1[0]<<'\n';
     cout<<"Kaido    : "<<v2[0]<<'\n';
-    // cout<<"Talha    : "<<v3[0]<<'\n';
+    cout<<"Talha    : "<<v3[0]<<'\n';
     cout<<"velanora : "<<v4[0]<<'\n';
     // cout<<"waleeja  : "<<v5[0]<<'\n';
     // cout<<"easha    : "<<v6[0]<<'\n';
