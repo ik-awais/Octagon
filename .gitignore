@@ -1,0 +1,175 @@
+# ───────────────────────────────────────────
+# C / C++ Build Artifacts
+# ───────────────────────────────────────────
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.bin
+*.elf
+*.hex
+*.map
+*.d
+*.su
+
+# CMake
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+*.cmake
+
+# Make
+Makefile.local
+
+# ───────────────────────────────────────────
+# VS Code
+# ───────────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ───────────────────────────────────────────
+# JetBrains IDEs (CLion, PyCharm, etc.)
+# ───────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# ───────────────────────────────────────────
+# Python
+# ───────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+wheels/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+.Python
+site-packages/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+virtualenv/
+.virtualenvs/
+
+# ───────────────────────────────────────────
+# Environment & Secrets
+# ───────────────────────────────────────────
+.env
+.env.*
+*.env
+secrets.json
+secrets.yaml
+config.local.*
+*.pem
+*.key
+*.cert
+*.p12
+
+# ───────────────────────────────────────────
+# OS Junk
+# ───────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ───────────────────────────────────────────
+# Logs & Temp Files
+# ───────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+*.patch
+
+# ───────────────────────────────────────────
+# Data & Archives
+# ───────────────────────────────────────────
+*.csv
+*.tsv
+*.sqlite
+*.sqlite3
+*.db
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.gz
+
+# ───────────────────────────────────────────
+# Jupyter Notebooks
+# ───────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ───────────────────────────────────────────
+# Node (if anyone experiments)
+# ───────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# ───────────────────────────────────────────
+# Coverage & Testing
+# ───────────────────────────────────────────
+.coverage
+coverage/
+htmlcov/
+.pytest_cache/
+.tox/
+nosetests.xml
+test-results/
