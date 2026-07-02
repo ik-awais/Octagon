@@ -20,16 +20,6 @@ public:
     }
 
     // Replace yourName with your mentioned name in Issue Description:
-    void resize_kaido() {
-        if(cap) cap*=2;
-        else    cap++;
-        int* newPtr=new int[cap];
-        for(int i=0;i<len;i++) newPtr[i]=ptr[i];
-        delete[] ptr;
-        ptr=newPtr;
-    }
-
-    // Replace yourName with your mentioned name in Issue Description:
     void pushback_waleeja(int value) {
        if (len<cap){
             ptr[len] = value;
@@ -41,6 +31,17 @@ public:
                 len++;
         }
     }
+
+    // Replace yourName with your mentioned name in Issue Description:
+    void resize_kaido() {
+        if(cap) cap*=2;
+        else    cap++;
+        int* newPtr=new int[cap];
+        for(int i=0;i<len;i++) newPtr[i]=ptr[i];
+        delete[] ptr;
+        ptr=newPtr;
+    }
+
 
     // Replace yourName with your mentioned name in Issue Description:
     void resize_waleeja() {
