@@ -14,7 +14,7 @@ public:
         int sum;
         while(i<j) {
             sum=nums[i]+nums[j];
-            if(sum==target) return {i+1,j+1};
+            if(sum==target)     return {i+1,j+1};
             else if(sum<target) i++;
             else                j--;
         }
