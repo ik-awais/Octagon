@@ -8,7 +8,7 @@ using namespace std;
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums,int target) {
-        // Two Pointer Apprach
+        // Two Pointer Approach
         int i=0;
         int j=nums.size()-1;
         int sum;
