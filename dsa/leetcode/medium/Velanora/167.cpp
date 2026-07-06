@@ -8,7 +8,21 @@ using namespace std;
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums,int target) {
-        // Your Code Here
+        int m = 0;
+        int n = (nums.size() - 1);
+        int sum = 0;
+        
+        while ( n>m )
+        {
+            sum = nums[m] + nums[n];
+            if (sum == target)
+                return {m+1, n+1};
+            else if (sum > target)
+                n--;
+            else
+                m++;
+        }
+        return {};
     }
 };
 
