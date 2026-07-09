@@ -27,6 +27,14 @@ public:
         }
         ptr[len++] = value;
     }
+    void pushback_areeba(int value)
+    {
+        if(len == cap)
+        {
+            resize_areeba();
+        }
+        ptr[len++] = value;
+    }
 
     // Replace yourName with your mentioned name in Issue Description:
     void resize_kaido() {
@@ -55,6 +63,16 @@ public:
         ptr = newPtr;
         
     }
+    void resize_areeba()
+    {
+        if(cap == 0)
+        {
+            cap++;
+        }else{
+            cap = cap *2;
+        }
+    }
+
 
     // Dont Touch Anything Else in this Vector Class.
     size_t size()const            { return len;        }
@@ -79,7 +97,7 @@ int main() {
     cout<<"Velanora vector size: "<<v4.size()<<'\n';
     // cout<<"Waleeja  vector size: "<<v5.size()<<'\n';
     // cout<<"Easha    vector size: "<<v6.size()<<'\n';
-    // cout<<"Areeba   vector size: "<<v7.size()<<'\n';
+     cout<<"Areeba   vector size: "<<v7.size()<<'\n';
 
     // Calling pushbacks
     cout<<"\nPushing Values ...\n";
@@ -89,7 +107,7 @@ int main() {
     v4.pushback_velanora (250014);
     // v5.pushback_waleeja  (250005);
     // v6.pushback_easha    (250064);
-    // v7.pushback_areeba   (250056);
+     v7.pushback_areeba   (250056);
 
     // Resized After push backs
     cout<<"\nSize Increased :\n";
@@ -99,7 +117,7 @@ int main() {
     cout<<"Velanora vector size: "<<v4.size()<<'\n';
     // cout<<"Waleeja  vector size: "<<v5.size()<<'\n';
     // cout<<"Easha    vector size: "<<v6.size()<<'\n';
-    // cout<<"Areeba   vector size: "<<v7.size()<<'\n';
+     cout<<"Areeba   vector size: "<<v7.size()<<'\n';
 
     // Printing Values;
     cout<<"\nPrinting Values :\n";
@@ -109,7 +127,7 @@ int main() {
     cout<<"velanora : "<<v4[0]<<'\n';
     // cout<<"waleeja  : "<<v5[0]<<'\n';
     // cout<<"easha    : "<<v6[0]<<'\n';
-    // cout<<"areeba   : "<<v7[0]<<'\n';
+     cout<<"areeba   : "<<v7[0]<<'\n';
 
     return 0;
 }
