@@ -2,27 +2,27 @@
 #include<vector>
 using namespace std;
 
-// Go To Leetcode, Go to problems tab, then search "Two Sum II"
+// Go To Leetcode, Go to problems tab, then search "Two Sum"
 
 // Solution Class
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums,int target) {
-        int m = 0;
-        int n = (nums.size() - 1);
-        int sum = 0;
-        
-        while ( n>m )
+        vector <int> adders;
+        for(int i = 0; i < nums.size(); i++)
         {
-            sum = nums[m] + nums[n];
-            if (sum == target)
-                return {m+1, n+1};
-            else if (sum > target)
-                n--;
-            else
-                m++;
+            for(int j = 0; j < nums.size(); j++)
+            {
+                if (i == j) {continue;}
+                if(nums[i]+nums[j] == target)
+                {
+                    adders.push_back(i);
+                    adders.push_back(j);
+                    return adders; 
+                }
+            }
         }
-        return {};
+        return adders;
     }
 };
 
@@ -32,7 +32,7 @@ public:
 int main() {
     Solution s;
     vector<int> testCase={2,7,11,15};
-    int target=9;
+    int target=13;
 
     vector<int> answer=s.twoSum(testCase,target);
 
