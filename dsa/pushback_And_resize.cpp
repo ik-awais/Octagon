@@ -27,14 +27,6 @@ public:
         }
         ptr[len++] = value;
     }
-    void pushback_areeba(int value)
-    {
-        if(len == cap)
-        {
-            resize_areeba();
-        }
-        ptr[len++] = value;
-    }
 
     // Replace yourName with your mentioned name in Issue Description:
     void pushback_waleeja(int value) {
@@ -56,6 +48,19 @@ public:
         else
         ptr[len++]=value;
     }
+ void pushback_areeba(int value)
+    {
+        if(len == cap)
+        {
+            resize_areeba();
+            ptr[len++] = value;
+        }else
+        {
+            ptr[len++] = value;
+        }
+
+    }
+
     // Replace yourName with your mentioned name in Issue Description:
     void resize_kaido() {
         if(cap) cap*=2;
@@ -84,17 +89,6 @@ public:
         ptr = newPtr;
         
     }
-    void resize_areeba()
-    {
-        if(cap == 0)
-        {
-            cap++;
-        }else{
-            cap = cap *2;
-        }
-    }
-
-
     // Replace yourName with your mentioned name in Issue Description:
     void resize_waleeja() {
        if (cap==0){
@@ -124,6 +118,24 @@ public:
         delete[] ptr;
         ptr=newptr;
      }
+     void resize_areeba()
+    {
+        if(cap == 0)
+        {
+            cap++;
+        }else{
+            cap = cap *2;
+        }
+
+        int *newptr = new int [cap];
+        for(int i = 0; i < len ; i++ )
+          {
+             newptr[i] = ptr[i];
+          }
+          
+          delete[] ptr;
+          ptr = newptr;
+    }
     // Dont Touch Anything Else in this Vector Class.
     size_t size()const            { return len;        }
     size_t capacity()const        { return cap;        }
