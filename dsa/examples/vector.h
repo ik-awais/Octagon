@@ -17,13 +17,16 @@ push your vector.h to github.
 
 class vector_yourName {
 private:
-    // Your Data Members Here
+    int *ptr;
+    int cap;
+    int len;
 public:
     // Your Default+Parameterized Constructor Here
     // Your Copy Constructor Here
 
     // Your push_back Here
     // Your resize Here
+    // Your pop_back Here
     // Your back Here
     // Your begin Here
     // Your end Here
