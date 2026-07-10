@@ -21,8 +21,8 @@ private:
     int cap;
     int len;
 public:
-    vector_kaido(int cap=1): cap(cap), len(0) {
-        ptr=new int[cap];
+    vector_kaido(int cap=1): cap(abs(cap)), len(0) {
+        ptr=new int[this->cap];
     }
     vector_kaido(const vector_kaido& other): cap(other.cap), len(other.len) {
         ptr=new int[cap];
