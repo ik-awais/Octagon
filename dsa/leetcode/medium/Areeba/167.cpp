@@ -8,8 +8,26 @@ using namespace std;
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums,int target) {
-        // Your Code Here
-    }
+        
+        int i = 0;
+        int j = nums.size() ;
+        while(i< j)
+        {
+            int sum = nums[i] + nums[j];
+            if(sum == target)
+            {
+                return {i+1, j+1};
+            }
+            if(sum <target)
+            {
+                i++;
+            }else
+            {
+                j--;
+            }
+        }
+        return {};
+    }      
 };
 
 // Main Function
@@ -18,7 +36,7 @@ public:
 int main() {
     Solution s;
     vector<int> testCase={2,7,11,15};
-    int target=9;
+    int target=18;
 
     vector<int> answer=s.twoSum(testCase,target);
 
