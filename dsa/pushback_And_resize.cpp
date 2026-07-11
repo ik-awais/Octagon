@@ -146,9 +146,7 @@ public:
           delete[] ptr;
           ptr = newptr;
     }
-
-
-     
+    
      void resize_ikawais() {
         cap == 0 ? cap++ : cap*=2; 
         int *newptr = ptr;
@@ -182,7 +180,7 @@ int main() {
     cout<<"Velanora vector size: "<<v4.size()<<'\n';
     cout<<"Waleeja  vector size: "<<v5.size()<<'\n';
     // cout<<"Easha    vector size: "<<v6.size()<<'\n';
-     cout<<"Areeba   vector size: "<<v7.size()<<'\n';
+    cout<<"Areeba   vector size: "<<v7.size()<<'\n';
 
     // Calling pushbacks
     cout<<"\nPushing Values ...\n";
@@ -192,7 +190,7 @@ int main() {
     v4.pushback_velanora (250014);
     v5.pushback_waleeja  (250005);
     // v6.pushback_easha    (250064);
-     v7.pushback_areeba   (250056);
+    v7.pushback_areeba   (250056);
 
     // Resized After push backs
     cout<<"\nSize Increased :\n";
@@ -202,27 +200,17 @@ int main() {
     cout<<"Velanora vector size: "<<v4.size()<<'\n';
     cout<<"Waleeja  vector size: "<<v5.size()<<'\n';
     // cout<<"Easha    vector size: "<<v6.size()<<'\n';
-     cout<<"Areeba   vector size: "<<v7.size()<<'\n';
+    cout<<"Areeba   vector size: "<<v7.size()<<'\n';
 
     // Printing Values;
     cout<<"\nPrinting Values :\n";
-
-    // cout<<"Awais    : "<<v1[0]<<'\n';
-    cout<<"Kaido    : "<<v2[0]<<'\n';
-    cout<<"Talha    : "<<v3[0]<<'\n';
-    cout<<"velanora : "<<v4[0]<<'\n';
-    cout<<"waleeja  : "<<v5[0]<<'\n';
-    // cout<<"easha    : "<<v6[0]<<'\n';
-     cout<<"Areeba   : "<<v7[0]<<'\n';
-
     cout<<"ik-awais: "<<v1[0]<<'\n';
     cout<<"Kaido   : "<<v2[0]<<'\n';
     cout<<"Talha   : "<<v3[0]<<'\n';
     cout<<"velanora: "<<v4[0]<<'\n';
     cout<<"waleeja : "<<v5[0]<<'\n';
     // cout<<"easha   : "<<v6[0]<<'\n';
-    // cout<<"areeba  : "<<v7[0]<<'\n';
-
+    cout<<"Areeba  : "<<v7[0]<<'\n';
 
     return 0;
 }
