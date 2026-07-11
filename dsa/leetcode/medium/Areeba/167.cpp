@@ -9,6 +9,26 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums,int target) {
         // Your Code Here
+        int i = 0;
+        int j = nums.size() ;
+        int sum = 0;
+        while(i< j)
+        {
+             sum = nums[i] + nums[j];
+            if(sum == target)
+            {
+                return {i+1, j+1};
+            }
+            if(sum <target)
+            {
+                i++;
+            }else
+            {
+                j--;
+            }
+        }
+        return {};
+    
     }
 };
 
