@@ -48,6 +48,7 @@ public:
         else
         ptr[len++]=value;
     }
+
     void pushback_areeba(int value)
     {
         if(len == cap)
@@ -60,6 +61,13 @@ public:
         }
     }
 
+
+    void pushback_ikawais(int value)
+    {
+        if(len==cap)resize_ikawais();
+        ptr[len++] = value;
+    }
+
     // Replace yourName with your mentioned name in Issue Description:
     void resize_kaido() {
         if(cap) cap*=2;
@@ -70,7 +78,6 @@ public:
         ptr=newPtr;
     }
 
-    
     void resize_velanora()
     {
         if(!cap)
@@ -120,6 +127,7 @@ public:
         ptr=newptr;
      }
 
+
      void resize_areeba()
     {
         if(cap == 0)
@@ -139,6 +147,18 @@ public:
           ptr = newptr;
     }
 
+
+     
+     void resize_ikawais() {
+        cap == 0 ? cap++ : cap*=2; 
+        int *newptr = ptr;
+        ptr = new int[cap];
+        for(int i=0;i<len;i++){
+            ptr[i]=newptr[i];
+        }
+        delete [] newptr;
+    }
+
     // Dont Touch Anything Else in this Vector Class.
     size_t size()const            { return len;        }
     size_t capacity()const        { return cap;        }
@@ -156,7 +176,7 @@ int main() {
 
     // Initial Sizes
     cout<<"Initial Sizes (Empty Vectors) :\n";
-    // cout<<"Awais    vector size: "<<v1.size()<<'\n';
+    cout<<"ik-awais vector size: "<<v1.size()<<'\n';
     cout<<"Kaido    vector size: "<<v2.size()<<'\n';
     cout<<"Talha    vector size: "<<v3.size()<<'\n';
     cout<<"Velanora vector size: "<<v4.size()<<'\n';
@@ -166,7 +186,7 @@ int main() {
 
     // Calling pushbacks
     cout<<"\nPushing Values ...\n";
-    // v1.pushback_awais    (250011);
+    v1.pushback_ikawais  (250011);
     v2.pushback_kaido    (253015);
     v3.pushback_talha    (250027);
     v4.pushback_velanora (250014);
@@ -176,7 +196,7 @@ int main() {
 
     // Resized After push backs
     cout<<"\nSize Increased :\n";
-    // cout<<"Awais    vector size: "<<v1.size()<<'\n';
+    cout<<"ik-awais vector size: "<<v1.size()<<'\n';
     cout<<"Kaido    vector size: "<<v2.size()<<'\n';
     cout<<"Talha    vector size: "<<v3.size()<<'\n';
     cout<<"Velanora vector size: "<<v4.size()<<'\n';
@@ -186,6 +206,7 @@ int main() {
 
     // Printing Values;
     cout<<"\nPrinting Values :\n";
+
     // cout<<"Awais    : "<<v1[0]<<'\n';
     cout<<"Kaido    : "<<v2[0]<<'\n';
     cout<<"Talha    : "<<v3[0]<<'\n';
@@ -193,6 +214,15 @@ int main() {
     cout<<"waleeja  : "<<v5[0]<<'\n';
     // cout<<"easha    : "<<v6[0]<<'\n';
      cout<<"Areeba   : "<<v7[0]<<'\n';
+
+    cout<<"ik-awais: "<<v1[0]<<'\n';
+    cout<<"Kaido   : "<<v2[0]<<'\n';
+    cout<<"Talha   : "<<v3[0]<<'\n';
+    cout<<"velanora: "<<v4[0]<<'\n';
+    cout<<"waleeja : "<<v5[0]<<'\n';
+    // cout<<"easha   : "<<v6[0]<<'\n';
+    // cout<<"areeba  : "<<v7[0]<<'\n';
+
 
     return 0;
 }
