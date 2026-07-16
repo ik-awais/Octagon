@@ -57,3 +57,94 @@ public:
 
     ~vector_kaido() { delete[] ptr; }
 };
+
+class vector_waleeja {
+private:
+    int *ptr;
+    int cap;
+    int len;
+public:
+    vector_waleeja(int cap = 1){
+        if(cap < 0) cap*=(-1);
+        this -> cap = cap;
+        ptr = new int [cap];
+        len = 0;
+    }
+
+    vector_waleeja(const vector_waleeja &vec){
+        this -> cap = vec.cap;
+        this -> len = vec.len;
+        ptr = new int [cap];
+
+        for(int i=0; i<len; i++){
+            ptr[i] = vec.ptr[i];
+        }
+    }
+
+    void push_back(int val){
+        if(len==cap) resize();
+            ptr[len] = val;
+            len++;
+        
+    }
+
+    void resize(){
+        if(cap==0) cap =1;
+        else cap*=2;
+        
+        int *newptr = new int [cap];
+        for(int i=0; i<len; i++){
+            newptr[i]=ptr[i];
+        }
+            delete [] ptr;
+            ptr = newptr;
+    }
+
+    void pop_back(){
+        if(len>0)
+        len--;
+    }
+
+    int back() const{
+        if(len>0) return ptr[len-1];
+        else{
+            throw std::runtime_error("Vector is empty!");
+        }
+    }
+
+    int* begin() const{
+        return ptr;
+    }
+
+    int* end() const{
+        return ptr+len;
+    }
+
+    int& operator[](int index){
+        if(index >= 0 && index < len){
+            return ptr[index];
+        }
+        else{
+            throw std::runtime_error("Invalid Index!");
+        }
+    }
+
+    int size() const{
+        return len;
+    }
+
+    int capacity() const{
+        return cap;
+    }
+
+    bool empty() const{
+        if(len==0){
+            return 1;
+        }
+        return 0;
+    }
+
+    ~vector_waleeja(){
+        delete [] ptr;
+    }
+};
