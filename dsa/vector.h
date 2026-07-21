@@ -148,3 +148,79 @@ public:
         delete [] ptr;
     }
 };
+
+class vector_Talha {
+private:
+    int *ptr;
+    int cap;
+    int len;
+public:
+
+    // Your Default+Parameterized Constructor Here
+        vector_Talha(int cap=1){
+        if(cap<0)
+            cap*=-1;
+        this->cap=cap;
+        ptr= new int[cap];
+        len=0;
+    }
+    // Your Copy Constructor Here
+    vector_Talha(const vector_Talha &obj){
+        this->cap=obj.cap;
+        this->len=obj.len;
+        ptr=new int[cap];
+        for(int i=0;i<len;i++) 
+            ptr[i]=obj.ptr[i];
+    }
+    // Your push_back Here
+    void push_back(int val){
+        if(len==cap) resize();
+       ptr[len++]=val; 
+    }
+    // Your resize Here
+    void resize(){
+        (cap)?cap*=2:cap++;
+        int * newptr=new int [cap];
+        for(int i=0;i<len;i++) newptr[i]=ptr[i];        
+        delete [] ptr;
+        ptr=newptr;
+    }
+    // Your pop_back Here
+    void pop_back(){
+        if(len) len--;
+    }
+    // Your back Here
+    int back(){
+        if(len) return ptr[len-1];
+        throw std::runtime_error("Vector is empty!");
+    }
+    // Your begin Here
+    int * begin(){
+        return  ptr;
+    }
+    // Your end Here
+    int * end(){
+        return ptr+len;
+    }
+    // Your operator[] Here
+    int & operator[](int index){
+        if(index<len&&index>=0) return ptr[index];
+        throw std::runtime_error("Invalid Index!");
+    }
+    // Your size Here
+    int size(){
+        return len;
+    }
+    // Your capacity Here
+    int capacity(){
+        return cap;
+    }
+    // Your empty Here
+    bool empty(){
+        return !len;
+    }
+    // Your Destructor Here
+    ~vector_Talha(){
+        delete [] ptr;
+    }
+};
