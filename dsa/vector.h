@@ -190,16 +190,16 @@ public:
         if(len) len--;
     }
     // Your back Here
-    int back(){
+    int back()const{
         if(len) return ptr[len-1];
         throw std::runtime_error("Vector is empty!");
     }
     // Your begin Here
-    int * begin(){
+    int * begin()const{
         return  ptr;
     }
     // Your end Here
-    int * end(){
+    int * end()const{
         return ptr+len;
     }
     // Your operator[] Here
@@ -208,15 +208,15 @@ public:
         throw std::runtime_error("Invalid Index!");
     }
     // Your size Here
-    int size(){
+    int size()const{
         return len;
     }
     // Your capacity Here
-    int capacity(){
+    int capacity()const{
         return cap;
     }
     // Your empty Here
-    bool empty(){
+    bool empty()const{
         return !len;
     }
     // Your Destructor Here
