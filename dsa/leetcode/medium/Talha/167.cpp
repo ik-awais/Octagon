@@ -8,8 +8,25 @@ using namespace std;
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums,int target) {
-        // Your Code Here
-    }
+        // Your Code Here  if (target >= -1000 && target <= 1000) {
+            int temp, left, right;
+            left = 0;
+            right = nums.size()-1;
+            for (int i = 0; i < nums.size(); i++) {
+                temp = nums[left] + nums[right];
+                if (temp == target)
+                    return {left + 1, right + 1};
+                else {
+                    if (temp > target)
+                        right = right - 1;
+                    else
+                        left = left + 1;
+                }
+            }
+        
+    return {};
+}
+    
 };
 
 // Main Function
