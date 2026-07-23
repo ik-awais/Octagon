@@ -148,3 +148,131 @@ public:
         delete [] ptr;
     }
 };
+class vector_areeba
+{
+    private: 
+       int *ptr;
+       int cap;
+       int len;
+    public:
+
+       vector_areeba(int cap = 1)
+       {
+        if(cap < 0)
+        {
+            cap = -1 * cap;
+        }
+        len = 0;
+        ptr = new int [cap];
+       }
+
+       vector_areeba(const vector_areeba& c)  
+        {
+           cap = c.cap;
+           len = c.len;
+
+           ptr = new int [cap];
+           for (int i = 0 ; i < len; i++)
+           {
+             ptr[i] = c.ptr[i];
+           }
+        }
+        
+        void push_back(int val)
+        {
+            if (cap == len)
+            {
+                resize();
+            }else
+            {
+                ptr[len++] = val;
+            }
+        }
+        
+        void resize()
+        {
+           if (cap == 0)
+           {
+               cap++;
+           }else
+           {
+              cap = cap * 2; 
+           }
+           int *newptr = new int [cap];
+           for(int i = 0; i< len; i++)
+           {
+            newptr[i] = ptr[i];
+           }
+
+           delete [] ptr;
+           ptr = newptr;
+        }
+       
+        void pop_back()
+        {
+            if (len != 0)
+            {
+                len--;
+            }
+        }
+
+        int Back()const
+        {
+            if(len == 0)
+            {
+                throw std::runtime_error("Vector is empty!");
+            }
+            
+            return ptr[len -1];
+        }
+
+       const  int *Begain()const 
+        {
+             return ptr;
+        }
+
+        const int *End()const
+        {
+            return ptr +len;
+        }
+
+        int& operator[](int index)
+        {
+            if(index >= 0 && index < len)
+            {
+                return ptr[index];
+            }else
+            {
+                throw std::runtime_error("Invalid Index!");
+            }
+        }
+
+        int Size()const
+        {
+            return len;
+        }
+
+        int Capacity()const
+        {
+            return cap;
+        }
+
+        bool Empty()const
+        {
+           if(len == 0)
+           {
+            return false;
+           }
+           else 
+           {
+            return true;
+           }
+        }
+
+        ~vector_areeba()
+        {
+            delete []ptr;
+        }
+};
+
+
