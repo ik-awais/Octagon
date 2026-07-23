@@ -147,4 +147,75 @@ public:
     ~vector_waleeja(){
         delete [] ptr;
     }
+
+
+};
+
+class vector_velanora {
+private:
+    int *ptr;
+    int cap;
+    int len;
+public:
+    vector_velanora(int cap = 1) : len(0)
+    {
+        if(cap<0) cap = abs(cap);
+        this->cap = cap;
+        ptr = new int[cap];
+    }
+    
+    vector_velanora(const vector_velanora &V)
+    {
+        cap = V.cap;
+        len = V.len;
+        ptr = new int[cap];
+        for (int i = 0; i < len; i++)
+            ptr[i] = V.ptr[i];
+    }
+
+    void push_back(int val)
+    {
+        if(len == cap) resize();
+        ptr[len] = val;
+        len++; 
+    }
+   
+    void resize()
+    {
+        if(cap==0) cap++;
+        else cap *= 2;
+        int *temp = new int[cap];
+        for (int i = 0; i < len; i++)
+            temp[i]= ptr[i];
+        delete[] ptr;
+        ptr = temp;
+    }
+
+    void pop_back() {  if(len>0) len--; }
+    
+    int back() const
+    {
+        if(!len) throw std::runtime_error("Vector is empty!");
+        return ptr[len-1];
+    }
+
+    int* begin() const{ return ptr;}
+    int* end() const {  return ptr+len; }
+
+    int & operator [](int index)
+    {
+        if(index>=0 && index<len) return ptr[index];
+        else throw std::runtime_error("Invalid Index!");
+    }
+    
+    int size() const{ return len; }
+    int capacity() const { return cap; }
+
+    bool empty() const
+    {
+        if(len) return false; 
+        return true;
+    }
+
+    ~vector_velanora() { delete[] ptr; }
 };
