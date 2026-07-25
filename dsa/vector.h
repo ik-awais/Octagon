@@ -229,7 +229,7 @@ class vector_areeba
             return ptr[len -1];
         }
 
-       const  int *Begain()const 
+       const  int *Begin()const 
         {
              return ptr;
         }
