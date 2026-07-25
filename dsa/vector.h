@@ -163,6 +163,7 @@ class vector_areeba
         {
             cap = -1 * cap;
         }
+           this->cap = cap;
         len = 0;
         ptr = new int [cap];
        }
@@ -184,6 +185,7 @@ class vector_areeba
             if (cap == len)
             {
                 resize();
+                ptr[len++] = val;
             }else
             {
                 ptr[len++] = val;
@@ -262,11 +264,11 @@ class vector_areeba
         {
            if(len == 0)
            {
-            return false;
+            return 0;
            }
            else 
            {
-            return true;
+            return 1;
            }
         }
 
