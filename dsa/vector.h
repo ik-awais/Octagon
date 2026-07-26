@@ -219,7 +219,7 @@ class vector_areeba
             }
         }
 
-        int Back()const
+        int back()const
         {
             if(len == 0)
             {
@@ -229,12 +229,12 @@ class vector_areeba
             return ptr[len -1];
         }
 
-       const  int *Begin()const 
+        int *begin()const 
         {
              return ptr;
         }
 
-        const int *End()const
+         int *end()const
         {
             return ptr +len;
         }
@@ -250,17 +250,17 @@ class vector_areeba
             }
         }
 
-        int Size()const
+        int sze()const
         {
             return len;
         }
 
-        int Capacity()const
+        int capacity()const
         {
             return cap;
         }
 
-        bool Empty()const
+        bool empty()const
         {
            if(len == 0)
            {
