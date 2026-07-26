@@ -182,14 +182,8 @@ class vector_areeba
         
         void push_back(int val)
         {
-            if (cap == len)
-            {
-                resize();
+            if (cap == len)resize();
                 ptr[len++] = val;
-            }else
-            {
-                ptr[len++] = val;
-            }
         }
         
         void resize()
@@ -250,7 +244,7 @@ class vector_areeba
             }
         }
 
-        int sze()const
+        int size()const
         {
             return len;
         }
