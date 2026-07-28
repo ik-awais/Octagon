@@ -148,7 +148,128 @@ public:
         delete [] ptr;
     }
 
+};
+class vector_areeba
+{
+    private: 
+       int *ptr;
+       int cap;
+       int len;
+    public:
 
+       vector_areeba(int cap = 1)
+       {
+        if(cap < 0)
+        {
+            cap = -1 * cap;
+        }
+           this->cap = cap;
+        len = 0;
+        ptr = new int [cap];
+       }
+
+       vector_areeba(const vector_areeba& c)  
+        {
+           cap = c.cap;
+           len = c.len;
+
+           ptr = new int [cap];
+           for (int i = 0 ; i < len; i++)
+           {
+             ptr[i] = c.ptr[i];
+           }
+        }
+        
+        void push_back(int val)
+        {
+            if (cap == len)resize();
+                ptr[len++] = val;
+        }
+        
+        void resize()
+        {
+           if (cap == 0)
+           {
+               cap++;
+           }else
+           {
+              cap = cap * 2; 
+           }
+           int *newptr = new int [cap];
+           for(int i = 0; i< len; i++)
+           {
+            newptr[i] = ptr[i];
+           }
+
+           delete [] ptr;
+           ptr = newptr;
+        }
+       
+        void pop_back()
+        {
+            if (len != 0)
+            {
+                len--;
+            }
+        }
+
+        int back()const
+        {
+            if(len == 0)
+            {
+                throw std::runtime_error("Vector is empty!");
+            }
+            
+            return ptr[len -1];
+        }
+
+        int *begin()const 
+        {
+             return ptr;
+        }
+
+         int *end()const
+        {
+            return ptr +len;
+        }
+
+        int& operator[](int index)
+        {
+            if(index >= 0 && index < len)
+            {
+                return ptr[index];
+            }else
+            {
+                throw std::runtime_error("Invalid Index!");
+            }
+        }
+
+        int size()const
+        {
+            return len;
+        }
+
+        int capacity()const
+        {
+            return cap;
+        }
+
+        bool empty()const
+        {
+           if(len == 0)
+           {
+            return 1;
+           }
+           else 
+           {
+            return 0;
+           }
+        }
+
+        ~vector_areeba()
+        {
+            delete []ptr;
+        }
 };
 
 class vector_velanora {
@@ -219,3 +340,4 @@ public:
 
     ~vector_velanora() { delete[] ptr; }
 };
+
