@@ -2,21 +2,21 @@
 #include<string>
 using namespace std;
 
-// Struct Node Definition
-struct Node {
+// Struct ListNode Definition
+struct ListNode {
     string val;
-    Node* next;
-    Node(string val="",Node* next=nullptr): val(val), next(next) {}
+    ListNode* next;
+    ListNode(string val="",ListNode* next=nullptr): val(val), next(next) {}
 };
 
 // Replace yourName with your actual Name
-// Add Node Function
-void yourName_addNode(Node*& head, string s) {
+// Add ListNode Function
+void yourName_addNode(ListNode*& head, string s) {
     // Your Code Here
 }
 
 // Print list Function
-void printList(Node* head) {
+void printList(ListNode* head) {
     while(head) {
         cout<<head->val<<" -> ";
         head=head->next;
@@ -27,8 +27,8 @@ void printList(Node* head) {
 // Do Not Make Any Changes in main (Other than Designated Region)
 // Main Function
 int main() {
-    // Pointer to First Node (head)
-    Node* head=nullptr;
+    // Pointer to First ListNode (head)
+    ListNode* head=nullptr;
 
     // Call Your Function Here
     // Replace This Line With Your Function Call
