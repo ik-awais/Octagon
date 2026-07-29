@@ -10,8 +10,8 @@ struct ListNode {
 };
 
 // Replace yourName with your actual Name
-// Add ListNode Function
-void yourName_addNode(ListNode*& head, string s) {
+// pushback Function
+void yourName_pushback(ListNode*& head, string s) {
     // Your Code Here
 }
 
