@@ -30,7 +30,7 @@ int main() {
     // Pointer to First ListNode (head)
     ListNode* head=nullptr;
 
-    // Call Your Function Here
+    // Function Calls
     // Replace This Line With Your Function Call
 
     // Print list
