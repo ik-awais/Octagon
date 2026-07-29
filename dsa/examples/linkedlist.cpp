@@ -24,6 +24,15 @@ void printList(ListNode* head) {
     cout<<"NULL\n";
 }
 
+// Memory Cleanup Function
+void deleteList(ListNode*& head) {
+    while(head) {
+        ListNode* target=head;
+        head=head->next;
+        delete target;
+    }
+}
+
 // Do Not Make Any Changes in main (Other than Designated Region)
 // Main Function
 int main() {
@@ -35,6 +44,9 @@ int main() {
 
     // Print list
     printList(head);
+
+    // Delete list
+    deleteList(head);
 
     return 0;
 }
