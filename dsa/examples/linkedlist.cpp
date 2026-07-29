@@ -12,6 +12,12 @@ struct Node {
     }
 };
 
+// Replace yourName with your actual Name
+// Add Node Function
+void yourName_addNode(Node*& head, string s) {
+    // Your Code Here
+}
+
 // Print list Function
 void printList(Node* head) {
     while(head) {
@@ -24,13 +30,14 @@ void printList(Node* head) {
 // Do Not Make Any Changes in main (Other than Designated Region)
 // Main Function
 int main() {
-    // First Node (Head)
-    Node head("First Node");
+    // Pointer to First Node (head)
+    Node* head=nullptr;
 
-    // Your Code Here
+    // Call Your Function Here
+    // Replace This Line With Your Function Call
 
     // Print list
-    printList(&head);
+    printList(head);
 
     return 0;
 }
