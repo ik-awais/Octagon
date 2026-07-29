@@ -6,10 +6,7 @@ using namespace std;
 struct Node {
     string val;
     Node* next;
-    Node(string val="",Node* next=nullptr) {
-        this->val=val;
-        this->next=next;
-    }
+    Node(string val="",Node* next=nullptr): val(val), next(next) {}
 };
 
 // Replace yourName with your actual Name
