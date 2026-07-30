@@ -2,18 +2,21 @@
 #include<string>
 using namespace std;
 
-// Struct Node Definition
-struct Node {
+// Struct ListNode Definition
+struct ListNode {
     string val;
-    Node* next;
-    Node(string val="",Node* next=nullptr) {
-        this->val=val;
-        this->next=next;
-    }
+    ListNode* next;
+    ListNode(string val="",ListNode* next=nullptr): val(val), next(next) {}
 };
 
+// Replace yourName with your actual Name
+// pushback Function
+void yourName_pushback(ListNode*& head, string s) {
+    // Your Code Here
+}
+
 // Print list Function
-void printList(Node* head) {
+void printList(ListNode* head) {
     while(head) {
         cout<<head->val<<" -> ";
         head=head->next;
@@ -21,16 +24,29 @@ void printList(Node* head) {
     cout<<"NULL\n";
 }
 
+// Memory Cleanup Function
+void deleteList(ListNode*& head) {
+    while(head) {
+        ListNode* target=head;
+        head=head->next;
+        delete target;
+    }
+}
+
 // Do Not Make Any Changes in main (Other than Designated Region)
 // Main Function
 int main() {
-    // First Node (Head)
-    Node head("First Node");
+    // Pointer to First ListNode (head)
+    ListNode* head=nullptr;
 
-    // Your Code Here
+    // Function Calls
+    // Replace This Line With Your Function Call
 
     // Print list
-    printList(&head);
+    printList(head);
+
+    // Delete list
+    deleteList(head);
 
     return 0;
 }
