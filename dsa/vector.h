@@ -14,7 +14,7 @@ push your vector.h to github.
 */
 
 // Replace "yourName" with your own name
-
+#include <stdexcept>
 class vector_kaido {
 private:
     int *ptr;
@@ -341,3 +341,45 @@ public:
     ~vector_velanora() { delete[] ptr; }
 };
 
+class vector_ikawais {
+private:
+    int *ptr;
+    int cap;
+    int len;
+public:
+    vector_ikawais(int cap = 0):len(0){
+        if (cap < 0) {cap = -cap;}
+        this->cap = cap;
+        ptr = new int[cap];
+    }
+    vector_ikawais(const vector_ikawais& copy){
+        cap = copy.cap;
+        len = copy.len;
+        ptr = new int[cap];
+        for(int i = 0; i < len; i++)
+            ptr[i] = copy.ptr[i]; 
+    }
+    void push_back(int value)
+    {
+        if(len==cap)resize();
+        ptr[len++] = value;
+    }
+    void resize() {
+        cap == 0 ? cap++ : cap*=2; 
+        int *newptr = new int[cap];; 
+        for(int i=0;i<len;i++) {newptr[i]=ptr[i];}
+        delete[] ptr;
+        ptr = newptr;
+    }
+    void pop_back() {len--;}
+    int back() {
+        if(empty()) throw std::runtime_error("Vector is Empty!");
+        return ptr[len-1];
+    }
+    int* begin()const {return ptr;}
+    int* end()const {return ptr+len;}
+    int size()const {return len;}
+    int capacity()const {return cap;}
+    bool empty()const {return !len;}
+    ~vector_ikawais() {delete[] ptr;}
+};  
