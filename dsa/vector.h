@@ -382,4 +382,4 @@ public:
     int capacity()const {return cap;}
     bool empty()const {return !len;}
     ~vector_ikawais() {delete[] ptr;}
-};  
+};
