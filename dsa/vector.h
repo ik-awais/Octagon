@@ -1,3 +1,4 @@
+#include <stdexcept>
 /*
 This is a header file so dont write a main function.
 Just create another main.cpp for testing your vector
@@ -14,7 +15,6 @@ push your vector.h to github.
 */
 
 // Replace "yourName" with your own name
-#include <stdexcept>
 class vector_kaido {
 private:
     int *ptr;
