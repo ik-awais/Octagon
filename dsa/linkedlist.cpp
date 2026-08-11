@@ -19,6 +19,21 @@ void kaido_pushback(ListNode*& head, string s) {
     temp->next=newNode;
 }
 
+void waleeja_pushback(ListNode*& head, string s){
+    ListNode* new_node = new ListNode(s);
+    if(head == nullptr){
+       head = new_node;
+    }
+
+    else{
+        ListNode* temp = head;
+        while(temp->next != nullptr){
+            temp = temp->next;
+        }
+        temp->next = new_node;
+    }
+}
+
 // Print list Function
 void printList(ListNode* head) {
     while(head) {
@@ -45,6 +60,7 @@ int main() {
 
     // Function Calls
     kaido_pushback(head,"Kaido");
+    waleeja_pushback(head, "Waleeja");
 
     // Print list
     printList(head);
