@@ -28,7 +28,7 @@ def display():
 
     # 5 count(val) ---> counts the presence of a specific value
     reds = players.count("red")
-    print("\nCount of reds:\n",reds)
+    print("\nCount of red:\n",reds)
 
     # 6 - other methods 
     players.pop(3);
