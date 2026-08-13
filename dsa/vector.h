@@ -371,10 +371,18 @@ public:
         delete[] ptr;
         ptr = newptr;
     }
-    void pop_back() {len--;}
+     //Vulnerability found
+    void pop_back() {
+        if(empty()) {throw std::runtime_error("Vector is Empty!"); return;}
+        len--;
+    }
     int back() {
         if(empty()) throw std::runtime_error("Vector is Empty!");
         return ptr[len-1];
+    }
+    int &operator[](int index) const{
+        if(index<len&&index>=0)return ptr[index];
+        throw std::runtime_error("Invalid Index you dummy 🤨");
     }
     int* begin()const {return ptr;}
     int* end()const {return ptr+len;}
