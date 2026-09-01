@@ -34,14 +34,14 @@ void kaido_printList(ListNode* head) {
 // Push Front Functions
 void kaido_pushfront(ListNode*& head, int val) {
     ListNode* newNode=new (nothrow) ListNode(val);
-    if(!newNode) { cout<<"Memory Allocation Failed!"; return;}
+    if(!newNode) { cout<<"Memory Allocation Failed!\n"; return;}
     newNode->next=head;
     head=newNode;
 }
 
 // Pop Front Functions
 void kaido_popfront(ListNode*& head) {
-    if(!head) { cout<<"Empty List!"; return; }
+    if(!head) { cout<<"Empty List!\n"; return; }
     ListNode* target=head;
     head=head->next;
     delete target;
