@@ -18,6 +18,8 @@ def display():
     print(f"\nAfter appending violet-blue\n {players}")
     players.append("green")
     print(f"\nAfter appending green\n{players}")
+    players.append("mauve")
+    print("\nAfter appending: mauve\n", players)
 
     # 2. insert(id, val) ---> add a player at a specific index
     players.insert(4,"orange")
@@ -26,6 +28,8 @@ def display():
     print(f"\nAfter inserting violet-blue at index 0\n {players}")
     players.insert(4, "pink")
     print(f"\nAfter inserting pink at index 4\n {players}")
+    players.insert(1, "white")
+    print(f"\nAfter inserting white at index 1\n", players)
 
     # 3 remove(val) ---> remove a specific player by value
     players.remove("cyan")
@@ -34,6 +38,8 @@ def display():
     print(f"\nAfter removing violet-blue\n {players}")
     players.remove("blue")
     print(f"\nAfter removing blue\n {players}")
+    players.remove("white")
+    print(f"\nAfter removing white\n", players)
 
     # 4 sort() ----> sort the list alphabetically in ascending order
     players.sort()
@@ -46,15 +52,19 @@ def display():
     print(f"\nCount of violet-blue: {violetBlue}") 
     yellows = players.count("yellow")
     print(f"\nCount of yellow: {yellows}")
+    mauves = players.count("mauve")
+    print("\nCount of red: ",mauves)
 
     # 6 - other methods 
     # pop(index) --> Remove an element at a particular index
-    players.pop(3);
+    players.pop(3)
     print("\nAfter popping: 3 index\n",players)
     players.pop(0)
     print(f"\nAfter popping index 0:\n {players}")
     players.pop(1)
     print(f"\nAfter popping index 1:\n {players}")
+    players.pop(2)
+    print("\nAfter popping: index 2:\n",players)
 
 
     # reverse() --> Reverse the elements without creating another list
