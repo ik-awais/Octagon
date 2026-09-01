@@ -34,7 +34,7 @@ void kaido_printList(ListNode* head) {
 // Push Front Functions
 void kaido_pushfront(ListNode*& head, int val) {
     ListNode* newNode=new (nothrow) ListNode(val);
-    if(!newNode) { cout<<"Memory Full!"; return;}
+    if(!newNode) { cout<<"Memory Allocation Failed!"; return;}
     newNode->next=head;
     head=newNode;
 }
