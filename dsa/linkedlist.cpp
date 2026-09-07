@@ -45,7 +45,7 @@ void ikawais_pushback(ListNode*& head, string s){
     temp->next = newNode;
 }
 
-void Talha_pushback(ListNode * head,string s){
+void Talha_pushback(ListNode *head,string s){
     if(head == nullptr){
         ListNode * ptr = new ListNode(s);
         head = ptr;
@@ -87,6 +87,7 @@ int main() {
     kaido_pushback(head,"Kaido");
     waleeja_pushback(head, "Waleeja");
     ikawais_pushback(head, "Muhammad Awais");
+    Talha_pushback(head,"Talha");
     // Print list
     printList(head);
 
