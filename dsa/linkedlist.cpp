@@ -45,7 +45,7 @@ void ikawais_pushback(ListNode*& head, string s){
     temp->next = newNode;
 }
 
-void Talha_pushback(ListNode *head,string s){
+void Talha_pushback(ListNode*& head,string s){
     if(head == nullptr){
         ListNode * ptr = new ListNode(s);
         head = ptr;
