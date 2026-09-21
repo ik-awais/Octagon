@@ -20,6 +20,8 @@ def display():
     print(f"\nAfter appending green\n{players}")
     players.append("mauve")
     print("\nAfter appending: mauve\n", players)
+    players.append("grey")
+    print(f"\nAfter appending: grey\n",players)
 
     # 2. insert(id, val) ---> add a player at a specific index
     players.insert(4,"orange")
@@ -30,6 +32,9 @@ def display():
     print(f"\nAfter inserting pink at index 4\n {players}")
     players.insert(1, "white")
     print(f"\nAfter inserting white at index 1\n", players)
+    players.insert(4, "red")
+    print(f"\nAfter inserting red at index 4\n", players)
+
 
     # 3 remove(val) ---> remove a specific player by value
     players.remove("cyan")
@@ -40,10 +45,13 @@ def display():
     print(f"\nAfter removing blue\n {players}")
     players.remove("white")
     print(f"\nAfter removing white\n", players)
-
+    players.remove("red")
+    print(f"\nAfter removing red\n", players)
     # 4 sort() ----> sort the list alphabetically in ascending order
     players.sort()
     print("\nAfter sorting alphabetically:\n",players)
+    players.sort()
+    print(f"\nUpdated sorting of list in alphabetical order:\n", players)
 
     # 5 count(val) ---> counts the presence of a specific value
     reds = players.count("red")
@@ -54,6 +62,8 @@ def display():
     print(f"\nCount of yellow: {yellows}")
     mauves = players.count("mauve")
     print("\nCount of red: ",mauves)
+    grey = players.count("grey")
+    print(f"\nCount of grey: ", grey)
 
     # 6 - other methods 
     # pop(index) --> Remove an element at a particular index
