@@ -9,7 +9,16 @@ struct ListNode {
     ListNode(int val=0) : val(val), next(nullptr) {}
 };
 
-// Make List Functions
+ListNode* kaido_makeList(const vector<int>& vals) {
+    ListNode dummy;
+    ListNode* tail=&dummy;
+    for(int i:vals) {
+        tail->next=new ListNode(i);
+        tail=tail->next;
+    }
+    return dummy.next;
+}
+
 ListNode* Talha_Zahoor_makeList(const vector<int>& vals) {
     // Your Code Here
     ListNode alpha;
@@ -33,6 +42,15 @@ ListNode* ikawais_makeList(const vector<int>& vals) {
 }
 
 // Print List Functions
+void kaido_printList(ListNode* head) {
+    cout<<"Kaido List: ";
+    while(head) {
+        cout<<head->val<<" -> ";
+        head=head->next;
+    }
+    cout<<"NULL\n";
+} 
+
 void Talha_Zahoor_printList(ListNode* head) {
     // Your Code Here
     cout<<"Talha List: ";
@@ -51,6 +69,13 @@ void ikawais_printList(ListNode* head) {
 }
 
 // Push Front Functions
+void kaido_pushfront(ListNode*& head, int val) {
+    ListNode* newNode=new (nothrow) ListNode(val);
+    if(!newNode) { cout<<"Memory Allocation Failed!\n"; return;}
+    newNode->next=head;
+    head=newNode;
+}
+
 void Talha_Zahoor_pushfront(ListNode*& head, int val) {
     ListNode * node =new ListNode(val);
     if(head == nullptr){
@@ -74,6 +99,13 @@ void ikawais_pushfront(ListNode*& head, int val) {
 }
 
 // Pop Front Functions
+void kaido_popfront(ListNode*& head) {
+    if(!head) { cout<<"Empty List!\n"; return; }
+    ListNode* target=head;
+    head=head->next;
+    delete target;
+}
+
 void Talha_Zahoor_popfront(ListNode*& head) {
     // Your Code Here
     if(head == nullptr)
@@ -92,6 +124,10 @@ void ikawais_popfront(ListNode*& head) {
 }
 
 // Delete List Functions
+void kaido_deleteList(ListNode*& head) {
+    while(head) kaido_popfront(head);
+}
+
 void Talha_Zahoor_deleteList(ListNode*& head) {
     if(head == nullptr) return;
     while(head){
@@ -119,37 +155,44 @@ void ikawais_deleteList(ListNode*& head) {
 int main() {
 
     // Make List Function Calls
+    ListNode* kaido_head=kaido_makeList({11,12,13,14,15});
     ListNode* Talha_head = Talha_Zahoor_makeList({1,2,3,4,5});
     ListNode *ikawais;
     vector<int> input = {2,4,6,8};
-
     ikawais = ikawais_makeList(input);
 
     // Print List Function Calls
+    kaido_printList(kaido_head);
     Talha_Zahoor_printList(Talha_head);
     ikawais_printList(ikawais);
 
     // Push Front Function Calls
+    kaido_pushfront(kaido_head, 10);
     Talha_Zahoor_pushfront(Talha_head, 10);
     ikawais_pushfront(ikawais, 1);
 
     // Print List Function Calls
+    kaido_printList(kaido_head);
     Talha_Zahoor_printList(Talha_head);
     ikawais_printList(ikawais);
 
     // Pop Front Function Calls
+    kaido_popfront(kaido_head);
     Talha_Zahoor_popfront(Talha_head);
     ikawais_popfront(ikawais);
 
     // Print List Function Calls
+    kaido_printList(kaido_head);
     Talha_Zahoor_printList(Talha_head);
     ikawais_printList(ikawais);
 
     // Delete List Function Calls
+    kaido_deleteList(kaido_head);
     Talha_Zahoor_deleteList(Talha_head);
     ikawais_deleteList(ikawais);
 
     // Print List Function Calls
+    kaido_printList(kaido_head);
     Talha_Zahoor_printList(Talha_head);
     ikawais_printList(ikawais);
 
