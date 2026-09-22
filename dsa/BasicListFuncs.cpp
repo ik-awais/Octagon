@@ -31,14 +31,14 @@ ListNode* Talha_Zahoor_makeList(const vector<int>& vals) {
 }
 
 ListNode* ikawais_makeList(const vector<int>& vals) {
-    ListNode *ikawais = new ListNode;
-    ListNode *temp = ikawais;
+    ListNode ikawais;
+    ListNode *temp = &ikawais;
     for(int i = 0; i < vals.size(); i++)
     {
         temp->next = new ListNode(vals[i]);
         temp = temp->next;
     }
-    return ikawais->next;
+    return ikawais.next;
 }
 
 // Print List Functions
@@ -63,7 +63,7 @@ void Talha_Zahoor_printList(ListNode* head) {
 
 void ikawais_printList(ListNode* head) {
     if(!head) { cout << "List is Empty!\n"; return;}
-    cout << "Awais -> ";
+    cout << "Awais List: ";
     while(head) { cout << head->val << " -> "; head = head->next; }
     cout << "NULL\n";
 }
@@ -95,7 +95,6 @@ void ikawais_pushfront(ListNode*& head, int val) {
     ListNode *temp = new ListNode(val);
     temp->next = head;
     head = temp;
-    cout << "Pushed at front successfully!\n";
 }
 
 // Pop Front Functions
@@ -119,7 +118,6 @@ void ikawais_popfront(ListNode*& head) {
     if(!head) { cout << "List is Empty!\n"; return;}
     ListNode *target = head;
     head = head->next;
-    cout << target->val << " is popped!\n"; 
     delete target;
 }
 
@@ -146,7 +144,6 @@ void ikawais_deleteList(ListNode*& head) {
         head = head->next;
         delete target;
     }
-    cout << "List Deleted!\n";
     head = nullptr;
 }
 
@@ -157,9 +154,7 @@ int main() {
     // Make List Function Calls
     ListNode* kaido_head=kaido_makeList({11,12,13,14,15});
     ListNode* Talha_head = Talha_Zahoor_makeList({1,2,3,4,5});
-    ListNode *ikawais;
-    vector<int> input = {2,4,6,8};
-    ikawais = ikawais_makeList(input);
+    ListNode *ikawais = ikawais_makeList({2,4,6,8});
 
     // Print List Function Calls
     kaido_printList(kaido_head);
@@ -198,5 +193,3 @@ int main() {
 
     return 0;
 }
-
-
