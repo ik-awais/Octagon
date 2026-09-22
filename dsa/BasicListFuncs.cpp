@@ -38,7 +38,7 @@ ListNode* ikawais_makeList(const vector<int>& vals) {
         temp->next = new ListNode(vals[i]);
         temp = temp->next;
     }
-    return ikawais->next;
+    return ikawais.next;
 }
 
 // Print List Functions
