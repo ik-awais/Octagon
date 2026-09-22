@@ -63,7 +63,7 @@ void Talha_Zahoor_printList(ListNode* head) {
 
 void ikawais_printList(ListNode* head) {
     if(!head) { cout << "List is Empty!\n"; return;}
-    cout << "Awais -> ";
+    cout << "Awais List: ";
     while(head) { cout << head->val << " -> "; head = head->next; }
     cout << "NULL\n";
 }
