@@ -144,7 +144,6 @@ void ikawais_deleteList(ListNode*& head) {
         head = head->next;
         delete target;
     }
-    cout << "List Deleted!\n";
     head = nullptr;
 }
 
