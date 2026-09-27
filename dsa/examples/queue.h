@@ -11,7 +11,7 @@ Make sure that your main.cpp is in the same folder as your queue.h file.
 Then write a main function in your main.cpp to test you queue's methods.
 
 Notes:
-1) Queue is basically opposite of a stack. In a stack, the rule is actully
+1) Queue is basically opposite of a stack. In a stack, the rule is actually
 LIFO (Last In First Out). In a queue, the rule is FIFO (First In First Out).
 2) A Queue has following properties so while implementing your queue class,
 make sure it follows these properties:
