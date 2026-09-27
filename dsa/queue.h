@@ -12,6 +12,7 @@ class kaido_queue {
     Node* head; // Points to front Node
     Node* tail; // Points to back Node
     size_t len; // Current size of queue
+    // Deep Copy Method
     void copy(const kaido_queue& other) {
         Node* curr=other.head;
         while(curr) {
