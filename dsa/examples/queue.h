@@ -27,6 +27,9 @@ Explanation:
 O(1) in time means that the speed of your queue's functions does not
 change as the size of queue grows. If queue is of size 1 or size 100,
 speed of push(), pop(), front(), size() and empty() remains constant.
+
+Note:
+Replace "yourName" with your actual Name.
 */
 
 // Queue Class
