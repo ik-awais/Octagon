@@ -1,44 +1,67 @@
 #include<stdexcept>
 
+template <typename T>
 // Queue Class
-class yourName_queue {
+class kaido_queue {
     // Node Struct
     struct Node {
-        int val;
+        T val;
         Node* next;
-        Node(int _val): val(_val), next(nullptr) {}
+        Node(T _val): val(_val), next(nullptr) {}
     };
     Node* head; // Points to front Node
     Node* tail; // Points to back Node
     size_t len; // Current size of queue
+    void copy(const kaido_queue& other) {
+        Node* curr=other.head;
+        while(curr) {
+            push(curr->val);
+            curr=curr->next;
+        }
+    }
 public:
     // Constructor
-    yourName_queue() {
-
+    kaido_queue(): head(nullptr), tail(nullptr), len(0) {}
+    // Copy Constructor
+    kaido_queue(const kaido_queue& other): head(nullptr), tail(nullptr), len(0) {
+        copy(other);
+    }
+    // = operator Overload
+    kaido_queue& operator=(const kaido_queue& other) {
+        if(this!=&other) {
+            clear();
+            copy(other);
+        }
+        return *this;
     }
 
     // Queue methods
-    void push(int val) {
-
+    void push(T val) {
+        if(!head) head=tail=new Node(val);
+        else {
+            tail->next=new Node(val);
+            tail=tail->next;
+        }
+        len++;
     }
-    int pop() {
-        
+    T pop() {
+        if(empty()) throw std::underflow_error("Queue is empty!");
+        Node* target=head;
+        if(head==tail) head=tail=nullptr;
+        else head=head->next;
+        T poppedVal=target->val;
+        delete target;
+        len--;
+        return poppedVal;
     }
-    int front() const {
-
+    T front() const {
+        if(empty()) throw std::underflow_error("Queue is empty!");
+        return head->val;
     }
-    int size() const {
-
-    }
-    bool empty() const {
-
-    }
-    void clear() {
-        
-    }
+    size_t size() const { return len; }
+    bool empty() const { return !len; }
+    void clear() { while(head) pop(); }
 
     // Destructor
-    ~yourName_queue() {
-
-    }
+    ~kaido_queue() { clear(); }
 };
