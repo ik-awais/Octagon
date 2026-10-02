@@ -45,6 +45,16 @@ void ikawais_pushback(ListNode*& head, string s){
     temp->next = newNode;
 }
 
+void velanora_pushback(ListNode* &head, string s){
+    ListNode* newNode = new ListNode(s);
+    if(!head) head = newNode;
+    else{
+        ListNode *curr= head;
+        while (curr->next){ curr = curr->next;}
+        curr->next = newNode;
+    }
+}
+
 // Print list Function
 void printList(ListNode* head) {
     while(head) {
@@ -73,6 +83,7 @@ int main() {
     kaido_pushback(head,"Kaido");
     waleeja_pushback(head, "Waleeja");
     ikawais_pushback(head, "Muhammad Awais");
+    velanora_pushback(head, "Areej Fatima");
     // Print list
     printList(head);
 
