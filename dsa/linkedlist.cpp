@@ -60,7 +60,6 @@ void Talha_pushback(ListNode*& head,string s){
     }
 }
 
-velanora-issue10
 void velanora_pushback(ListNode* &head, string s){
     ListNode* newNode = new ListNode(s);
     if(!head) head = newNode;
