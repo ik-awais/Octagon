@@ -59,6 +59,17 @@ void Talha_pushback(ListNode*& head,string s){
     temp->next= ptr;
     }
 }
+
+velanora-issue10
+void velanora_pushback(ListNode* &head, string s){
+    ListNode* newNode = new ListNode(s);
+    if(!head) head = newNode;
+    else{
+        ListNode *curr= head;
+        while (curr->next){ curr = curr->next;}
+        curr->next = newNode;
+    }
+}
 // Print list Function
 void printList(ListNode* head) {
     while(head) {
@@ -88,6 +99,7 @@ int main() {
     waleeja_pushback(head, "Waleeja");
     ikawais_pushback(head, "Muhammad Awais");
     Talha_pushback(head,"Talha");
+    velanora_pushback(head, "Areej Fatima");
     // Print list
     printList(head);
 
