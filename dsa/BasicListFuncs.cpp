@@ -41,6 +41,17 @@ ListNode* ikawais_makeList(const vector<int>& vals) {
     return ikawais.next;
 }
 
+ListNode* waleeja_makeList(const vector<int>& vals) {
+    ListNode dummyNode;
+    ListNode *temp = &dummyNode;
+
+    for(int i=0; i<vals.size(); i++){
+        temp->next = new ListNode(vals[i]);
+        temp = temp->next;
+    }
+    return dummyNode.next;
+}
+
 // Print List Functions
 void kaido_printList(ListNode* head) {
     cout<<"Kaido List: ";
@@ -66,6 +77,16 @@ void ikawais_printList(ListNode* head) {
     cout << "Awais List: ";
     while(head) { cout << head->val << " -> "; head = head->next; }
     cout << "NULL\n";
+}
+
+void waleeja_printList(ListNode* head){
+
+    cout << "Waleeja List: ";
+    while(head){
+        cout<<head->val<<" -> ";
+        head = head->next;
+    }
+    cout<<"NULL"<<endl;
 }
 
 // Push Front Functions
@@ -97,6 +118,12 @@ void ikawais_pushfront(ListNode*& head, int val) {
     head = temp;
 }
 
+void waleeja_pushfront(ListNode*& head, int val){
+    ListNode *n = new ListNode(val);
+    n->next = head;
+    head = n;
+}
+
 // Pop Front Functions
 void kaido_popfront(ListNode*& head) {
     if(!head) { cout<<"Empty List!\n"; return; }
@@ -119,6 +146,16 @@ void ikawais_popfront(ListNode*& head) {
     ListNode *target = head;
     head = head->next;
     delete target;
+}
+
+void waleeja_popfront(ListNode*& head){
+    if(!head){
+        cout<<"List is empty"<<endl;
+        return;
+    }
+    ListNode *temp = head;
+    head = head->next;
+    delete temp;
 }
 
 // Delete List Functions
@@ -147,6 +184,17 @@ void ikawais_deleteList(ListNode*& head) {
     head = nullptr;
 }
 
+void waleeja_deleteList(ListNode*& head){
+    if(!head){
+        cout<<"List is empty"<<endl;
+        return;
+    }
+
+    while(head){
+       waleeja_popfront(head);
+    }
+}
+
 // Main Function
 // Just call your functions on the designated lines
 int main() {
@@ -155,41 +203,49 @@ int main() {
     ListNode* kaido_head=kaido_makeList({11,12,13,14,15});
     ListNode* Talha_head = Talha_Zahoor_makeList({1,2,3,4,5});
     ListNode *ikawais = ikawais_makeList({2,4,6,8});
+    ListNode *waleeja_head = waleeja_makeList({9,8,7,6,5});
 
     // Print List Function Calls
     kaido_printList(kaido_head);
     Talha_Zahoor_printList(Talha_head);
     ikawais_printList(ikawais);
+    waleeja_printList(waleeja_head);
 
     // Push Front Function Calls
     kaido_pushfront(kaido_head, 10);
     Talha_Zahoor_pushfront(Talha_head, 10);
     ikawais_pushfront(ikawais, 1);
+    waleeja_pushfront(waleeja_head, 3);
 
     // Print List Function Calls
     kaido_printList(kaido_head);
     Talha_Zahoor_printList(Talha_head);
     ikawais_printList(ikawais);
+    waleeja_printList(waleeja_head);
 
     // Pop Front Function Calls
     kaido_popfront(kaido_head);
     Talha_Zahoor_popfront(Talha_head);
     ikawais_popfront(ikawais);
+    waleeja_popfront(waleeja_head);
 
     // Print List Function Calls
     kaido_printList(kaido_head);
     Talha_Zahoor_printList(Talha_head);
     ikawais_printList(ikawais);
+    waleeja_printList(waleeja_head);
 
     // Delete List Function Calls
     kaido_deleteList(kaido_head);
     Talha_Zahoor_deleteList(Talha_head);
     ikawais_deleteList(ikawais);
+    waleeja_deleteList(waleeja_head);
 
     // Print List Function Calls
     kaido_printList(kaido_head);
     Talha_Zahoor_printList(Talha_head);
     ikawais_printList(ikawais);
+    waleeja_printList(waleeja_head);
 
     return 0;
 }
