@@ -61,11 +61,14 @@ This is the **DSA** workspace for the Octagon team. We study Data Structures and
 📂 dsa/
 │
 ├── 📄 README.md                    ← You are here
-│
-├── your-completed-file.cpp         ← completed work lives here
-│
-└── 📂 examples/
-    └── template.cpp                ← incomplete files to pick up, complete & push
+├── Category-1                      ← Categorized task directories
+├── Category-2
+├── Category-3
+├── ...
+└── Category-n
+    ├── 📂 examples/
+    │   └── template.cpp            ← incomplete files to pick up, paste outside, complete and push
+    └── completed.cpp               ← completeed files here
 ```
 
 > Files go directly in `dsa/` once completed. `examples/` holds the templates only.
